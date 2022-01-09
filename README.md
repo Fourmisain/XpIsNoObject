@@ -1,13 +1,13 @@
-# ~~Fabric~~ Forge Example Mod
+'Too expensive?' Do you KNOW how much XP I have? I will not be treated like this! A woman of my stature works hard for her XP, and she must be able to spend it.
 
-*...using [Architectury Loom](https://github.com/architectury/architectury-loom)*
+Made with [this template thingy](https://github.com/architectury/archloom-example-mod).
+With some trivial mixins 'inspired' by [this mod](https://github.com/Xtreme533/Forging-Beyond).
 
-## Setup
+# TODO
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the
-IDE that you are using.
-
-## License
-
-This template, much like the original fabric-example-mod, is available under the CC0 license. Feel free to learn from it
-and incorporate it in your own projects.
+- [x] It works
+- [ ] Rename the mod internals to something less generic
+- [ ] Set XP cap to max int or something
+- [ ] Figure out how to build for Fabric.
+- [ ] Distribute for both Fabric and Forge.
+- [ ] I dunno, beg for money?
