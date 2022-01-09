@@ -10,11 +10,11 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public class AnvilMenuMixin {
     @ModifyConstant(method = "createResult", constant = @Constant(intValue = 40))
     private int customLimitInt(int i) {
-        return 99999;
+        return Integer.MAX_VALUE;
     }
 
     @ModifyConstant(method = "createResult", constant = @Constant(intValue = 39))
     private int customMaxInt(int i) {
-        return 99999 - 1;
+        return Integer.MAX_VALUE - 1;
     }
 }
