@@ -1,4 +1,4 @@
-package com.example.examplemod.mixin;
+package xyz.achu.xpisnoobject.mixin;
 
 import net.minecraft.world.inventory.AnvilMenu;
 import org.spongepowered.asm.mixin.Mixin;

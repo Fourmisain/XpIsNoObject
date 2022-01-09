@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package xyz.achu.xpisnoobject;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.Items;
@@ -13,12 +13,12 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod("examplemod")
-public class ExampleMod {
+@Mod("xpisnoobject")
+public class ModMain {
 
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public ExampleMod() {
+    public ModMain() {
 
         // This is our mod's event bus, used for things like registry or lifecycle events
         IEventBus MOD_BUS = FMLJavaModLoadingContext.get().getModEventBus();
@@ -40,16 +40,16 @@ public class ExampleMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        LOGGER.info("Hello from common setup! This is *after* registries are done, so we can do this:");
-        LOGGER.info("Look, I found a {}!", Items.DIAMOND.getRegistryName());
+       // LOGGER.info("Hello from common setup! This is *after* registries are done, so we can do this:");
+       // LOGGER.info("Look, I found a {}!", Items.DIAMOND.getRegistryName());
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
-        LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
+       // LOGGER.info("Hey, we're on Minecraft version {}!", Minecraft.getInstance().getLaunchedVersion());
     }
 
     @SubscribeEvent
     public void kaboom(ExplosionEvent.Detonate event) {
-        LOGGER.info("Kaboom! Something just blew up in {}!", event.getWorld());
+       // LOGGER.info("Kaboom! Something just blew up in {}!", event.getWorld());
     }
 }

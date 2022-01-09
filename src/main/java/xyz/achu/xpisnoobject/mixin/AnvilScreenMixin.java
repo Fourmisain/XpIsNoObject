@@ -1,4 +1,4 @@
-package com.example.examplemod.mixin;
+package xyz.achu.xpisnoobject.mixin;
 
 import net.minecraft.client.gui.screens.inventory.AnvilScreen;
 import org.spongepowered.asm.mixin.Mixin;
