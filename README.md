@@ -7,7 +7,7 @@ With some trivial mixins 'inspired' by [this mod](https://github.com/Xtreme533/F
 
 - [x] It works
 - [x] Rename the mod internals to something less generic
-- [ ] Set XP cap to max int or something
+- [x] Set XP cap to max int or something
 - [ ] Figure out how to build for Fabric.
 - [ ] Distribute for both Fabric and Forge.
 - [ ] I dunno, beg for money?
