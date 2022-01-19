@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 @Mixin(AnvilScreen.class)
 public class AnvilScreenMixin {
     @ModifyConstant(method = "renderLabels", constant = @Constant(intValue = 40))
-    private int customLimitInt(int i) {
+    private int mixinLimitInt(int i) {
         return Integer.MAX_VALUE;
     }
 }
