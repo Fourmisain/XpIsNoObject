@@ -1,5 +1,5 @@
 plugins {
-    id 'dev.architectury.loom' version '0.10.0-SNAPSHOT'
+    id 'dev.architectury.loom' version '0.12.0-SNAPSHOT'
     id 'maven-publish'
 }
 
@@ -80,27 +80,13 @@ dependencies {
     // mojang's official mappings, or feel free
     // to add your own mappings here (how about
     // mojmap layered with parchment, for example?)
-    mappings minecraft.officialMojangMappings()
+    mappings loom.officialMojangMappings()
 
     // uncomment this if you want to use yarn mappings
     // mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 
     // your forge dependency, this is **required** when using Forge Loom in forge mode!
     forge "net.minecraftforge:forge:${project.minecraft_version}-${project.forge_version}"
-
-    // additional dependencies can be specified using loom's regular format
-    // specifying a "mod" dependency (like modImplementation or modApi)
-    // will cause loom to remap the file to your specified mappings
-
-    // in this example, we'll be adding JEI as a dependency
-    // according to their developer example on GitHub
-    // see: https://github.com/mezz/JustEnoughItems/wiki/Getting-Started
-    // compile against the JEI API but do not include it at runtime
-    // don't worry about loom "not finding a forge mod" here,
-    // JEI's api just doesn't have any class with an @Mod annotation
-    modCompileOnly "mezz.jei:jei-1.18:${jei_version}:api"
-    // at runtime, use the full JEI jar
-    modRuntimeOnly "mezz.jei:jei-1.18:${jei_version}"
 }
 
 processResources {
@@ -115,11 +101,6 @@ processResources {
 }
 
 tasks.withType(JavaCompile) {
-    // ensure that the encoding is set to UTF-8, no matter what the system default is
-    // this fixes some edge cases with special characters not displaying correctly
-    // see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
-    // If Javadoc is generated, this must be specified in that task too.
-    options.encoding = "UTF-8"
     // when using 1.17, this should be 16
     // when using 1.16, this should be 8
     // when using 1.18, this should be 17
